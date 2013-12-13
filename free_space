@@ -1,9 +1,9 @@
 #bash
-echo "Today date is "; date >>output.txt
+echo "Today's date is" ; date >>output.txt
 echo "Querying Riverside"
 echo "Riverside" >>output.txt
 df -h |grep DATA |grep -v .pool>>output.txt
-echo "End Of Riverside"
+echo "End Of Riverside" >>output.txt
 echo "Riverside Complete"
 echo "Querying San Bruno"
 echo >>output.txt
@@ -20,5 +20,6 @@ echo "Laguna Nigel Complete"
 echo >>output.txt
 echo
 echo
-echo "Please type 'cat output.txt to see results"
+/bin/mail -s "Daily NARA Report" -a ~/Documents/FOSA_free.txt enrique.estrada@nara.gov < FOSA_free.txt
+echo "Please type 'cat output.txt to see results or check your e-mail"
 echo "Have a great day"
